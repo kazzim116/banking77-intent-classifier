@@ -1,5 +1,6 @@
 # Model weights and checkpoints — too large for GitHub, goes to S3
 models/
+checkpoints/
 
 # Jupyter
 .ipynb_checkpoints/

@@ -26,6 +26,7 @@ Many intents are semantically adjacent (`verify_my_identity` vs. `why_verify_ide
 - **Fine-tuning:** Full model (not frozen backbone) with `AutoModelForSequenceClassification`
 - **Hardware:** Single GPU, ~15 minutes training time
 - **Config:** `load_best_model_at_end=True` — final weights are the best checkpoint by eval loss
+- **Checkpoint directory:** `output_dir="../checkpoints/banking77-distilbert"` — kept separate from the final model directory to avoid accidentally uploading training checkpoints to HuggingFace
 
 ### Why DistilBERT?
  Near-BERT accuracy at lower latency and memory cost. It runs comfortably on a CPU-only `t3.small` EC2 instance with sub-second inference.
@@ -192,6 +193,7 @@ banking77-classifier/
 ├── assets/
 │   ├── confusion_matrix.png
 │   ├── per_class_f1.png
+│   ├── per_class_f1.csv
 │   └── api_demo.png
 ├── models/
 │   └── banking77-distilbert/
@@ -199,6 +201,7 @@ banking77-classifier/
 │       ├── model.safetensors
 │       ├── tokenizer.json
 │       └── tokenizer_config.json
+├── checkpoints/         # Training checkpoints (gitignored)
 ├── notebooks/           # Training and evaluation notebooks
 ├── Dockerfile
 ├── requirements.txt
