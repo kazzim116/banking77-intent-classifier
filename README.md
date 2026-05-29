@@ -91,7 +91,7 @@ User Request (JSON)
 
 **Infrastructure:**
 - Docker container → AWS EC2 `t3.small` (CPU-only, Amazon Linux 2023)
-- Model weights stored in S3 (`s3://mike-kazzi-banking77/banking77-distilbert/`)
+- Model weights stored in S3 (`s3://classifier-banking77/banking77-distilbert/`)
 - Model card published on HuggingFace Hub
 
 ---
