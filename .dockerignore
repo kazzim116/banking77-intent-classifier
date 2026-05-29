@@ -1,0 +1,33 @@
+# Notebooks — not needed at inference time
+notebooks/
+
+# Checkpoints — large, only the final model goes in
+models/checkpoints/
+
+# Assets — plots and CSVs, not needed at runtime
+assets/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets
+.env
+*.env
+
+# Git
+.git/
+.gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
